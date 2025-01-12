@@ -2,7 +2,7 @@ import React from "react";
 
 function Main() {
   return (
-    <main className="main-content container-fluid">
+    <main className="main-content container">
       <h2>
         Motivos por los que tu empresa debe aprovechar sí o sí esta herramienta
         financiera
