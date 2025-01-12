@@ -14,14 +14,14 @@ body {
     to bottom,
     #74acdf,
     #ffffff
-  ); /*Bandera Argentina*/
+  ); /* Bandera Argentina */
   background: url("../assets/leasingFondo.webp") no-repeat center center fixed;
   background-size: cover;
 }
 
 /* Estilos específicos para el header */
 .header-container {
-  position: absolute; /* Posición relativa al viewport */
+  position: fixed; /* Fijo en pantallas grandes */
   top: 0; /* Pegado a la parte superior */
   left: 0;
   width: 100%;
@@ -30,16 +30,17 @@ body {
   background: rgba(0, 0, 0, 0.4); /* Fondo semitransparente opcional */
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad */
+  z-index: 1000;
 }
 
 /* Tamaño y espaciado del texto en el header */
 .header-container h1 {
-  font-size: 2.5rem; /* Tamaño del título */
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
 .header-container p {
-  font-size: 1.2rem; /* Tamaño del subtítulo */
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -48,36 +49,36 @@ div {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: start; /* Alinea el contenido al inicio */
+  justify-content: start;
   align-items: center;
 }
 
 /* Ajusta el main para que no se superponga al header */
 .main-content {
-  padding-top: 150px; /* Ajusta según el alto del header */
+  padding-top: 120px; /* Ajusta según el alto del header */
   padding-bottom: 70px; /* Espacio suficiente para evitar superposición con el footer */
-  overflow-y: auto; /* Permite el scroll si el contenido es largo */
+  overflow-y: auto;
 }
 
 main h2,
 main ul,
 main li,
 main a {
-  font-size: 2rem; /* Tamaño grande */
-  color: whitesmoke; /* Texto blanco */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9); /* Sombra negra intensa */
-  -webkit-text-stroke: 1.5px black; /* Contorno negro */
+  font-size: 1.5rem;
+  color: whitesmoke;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+  -webkit-text-stroke: 1px black;
 }
 
 main h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
   font-weight: bold;
 }
 
 main ul {
-  margin-left: 40px; /* Sangría más pronunciada */
-  line-height: 1.5; /* Aumenta el espacio entre líneas */
+  margin-left: 20px;
+  line-height: 1.5;
   font-weight: bold;
 }
 
@@ -87,12 +88,12 @@ main a {
 
 main a:hover {
   text-decoration: underline;
-  color: #ffcc00; /* Color amarillo al pasar el mouse */
+  color: #ffcc00;
 }
 
-/* Estilos del footer (sin cambios) */
+/* Estilos del footer */
 .footer {
-  position: fixed;
+  position: fixed; /* Fijo por defecto */
   bottom: 0;
   left: 0;
   width: 100%;
@@ -111,10 +112,32 @@ main a:hover {
   text-decoration: underline;
   color: #ffcc00;
 }
-/* Ajusta el footer para pantallas pequeñas */
+
+/* Ajustes específicos para pantallas pequeñas */
 @media (max-width: 768px) {
-  .footer {
-    position: static; /* El footer ya no será fijo */
-    margin-top: 20px; /* Añade un margen superior */
+  /* Cambiar el header a posición estática */
+  .header-container {
+    position: static;
+    padding: 10px 5px;
+  }
+
+  /* Reducir el padding superior del main */
+  .main-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  /* Footer deja de ser fijo */
+  /* .footer {
+    position: static;
+    margin-top: 20px;
+  } */
+
+  /* Ajustar tamaños de texto */
+  main h2,
+  main ul,
+  main li,
+  main a {
+    font-size: 1.2rem; /* Reduce el tamaño en pantallas pequeñas */
   }
 }
