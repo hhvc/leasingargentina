@@ -53,6 +53,10 @@ div {
   align-items: center;
 }
 
+main {
+  text-align: center; /* Centra los elementos dentro del contenedor principal */
+}
+
 /* Ajusta el main para que no se superponga al header */
 .main-content {
   padding-top: 120px; /* Ajusta según el alto del header */
@@ -65,12 +69,14 @@ main ul,
 main li,
 main p,
 main a {
+  display: inline-block;
   font-size: 1.3rem;
   color: whitesmoke;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
-  -webkit-text-stroke: 1px black;
   background-color: rgba(0, 0, 0, 0.4);
   font-weight: bold;
+  padding: 4px 4px; /* Agrega espacio interno */
+  border-radius: 9px; /* Bordes redondeados opcionales */
 }
 
 main h2 {
