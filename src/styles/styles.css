@@ -63,29 +63,32 @@ div {
 main h2,
 main ul,
 main li,
+main p,
 main a {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: whitesmoke;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
   -webkit-text-stroke: 1px black;
   background-color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
 }
 
 main h2 {
+  font-size: 2rem;
   margin-bottom: 1rem;
   text-align: center;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
-main ul {
+/* main ul {
   margin-left: 20px;
   line-height: 1.5;
   font-weight: bold;
-}
+} */
 
-main a {
+/* main a {
   font-weight: bold;
-}
+} */
 
 main a:hover {
   text-decoration: underline;
@@ -141,4 +144,19 @@ main a:hover {
   main a {
     font-size: 1.2rem; /* Reduce el tamaño en pantallas pequeñas */
   }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    color: #128c7e; /* Verde de WhatsApp */
+  }
+  50% {
+    color: #ffcc00; /* Amarillo brillante */
+  }
+}
+
+.whatsapp-icon {
+  animation: blink 1s infinite; /* Duración de 1 segundo, repite infinitamente */
+  font-weight: bold;
 }
